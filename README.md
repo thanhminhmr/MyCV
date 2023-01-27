@@ -1,8 +1,12 @@
+# My Personal CV, based on AltaCV
+
+For more information on the AltaCV theme, please follow [this link](https://github.com/liantze/AltaCV). Below is the original README.md from the AltaCV project. 
+
 # AltaCV, yet another LaTeX CV/Résumé class
 
 v1.6.5 (3 Nov 2022), by LianTze Lim (liantze@gmail.com)
 
-* Added \mynames{...} to specify names to be highlighted in the publication list on 3 Nov 2022
+* Added `\mynames{...}` to specify names to be highlighted in the publication list on 3 Nov 2022
 * Starred `\NewInfoField*` command to handle Mastodon; Icons, `\cvskills`, `\wheelchart` have "copyable" text values; `\cvskill` supports numerical values {0.5, 1, ..., 4.5, 5} on 21 May 2021
 * Moved `biblatex`-related code to `*.cfg` files for easier edit on 8 May 2021
 * Removed dependency on `academicons` on 12 Apr 2021
@@ -172,3 +176,4 @@ as well as doing a bit of arithmetic when you're making the header to get it ful
 \makecvheader
 \end{adjustwidth}
 ```
+

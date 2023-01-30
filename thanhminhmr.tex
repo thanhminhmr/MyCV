@@ -1,0 +1,262 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.6.5, 3 Nov 2022) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper,normalphoto]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+
+
+
+\definecolor{VibrantGreen}{HTML}{64b613}
+\definecolor{CalmGreen}{HTML}{63a026}
+\definecolor{DarkGreen}{HTML}{356803}
+\definecolor{BlackishGreen}{HTML}{202917}
+\definecolor{highlightGreen}{HTML}{cdd5cc}
+
+
+\colorlet{name}{BlackishGreen}
+\colorlet{tagline}{DarkGreen}
+\colorlet{heading}{CalmGreen}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{DarkGreen}
+\colorlet{accent}{DarkGreen}
+\colorlet{emphasis}{BlackishGreen}
+\colorlet{body}{BlackishGreen}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% @thanhminhmr: Stealing \linkage command
+\newcommand{\linkage}[2]{\href{#1}{#2\textsuperscript{\space \tiny \textcolor{accent} \faLink}}}
+
+
+\begin{document}
+\name{Mai Thanh Minh}
+\tagline{Java Developer -- Lecturer -- Instructor}
+%% You can add multiple photos on the left or right
+\photoR{2.8cm}{img\_thanhminhmr}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{thanhminh.mr@gmail.com}
+  \phone{+84-70-2121-566}
+  %\mailaddress{Åddrésş, Street, 00000 Cóuntry}
+  %\location{Location, COUNTRY}
+  %\homepage{www.homepage.com}
+  %\twitter{@twitterhandle}
+  %\linkedin{your_id}
+  \github{thanhminhmr}
+  \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  \gitlab{thanhminhmr}
+  %\orcid{0000-0000-0000-0000}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+  %%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{Experience}
+
+\cvevent{Lecturer -- Instructor}{\linkage{https://uet.vnu.edu.vn/}{University of Engineering and Technology}}{August 2015 -- Ongoing}{}
+\begin{itemize}
+\item Giving lectures and designing \linkage{https://github.com/thanhminhmr/thegame}{\textit{exercises}} for Object Oriented Programming courses, assisting students on learning Java language and tools.
+\item Advising and mentoring undergraduate students on their theses, reviewing and providing feedback on their drafts, improving overall quality and clarity of their work.
+\end{itemize}
+
+\vspace{-0.25\baselineskip}
+\divider
+
+\cvevent{Lecturer -- Instructor}{\linkage{https://codegym.vn/}{CodeGym Vietnam JSC.}}{July 2022 -- December 2022}{}
+\begin{itemize}
+\item Instructed beginner level learner in Basic Programming, including programming language, principle and tools.
+\item Gave lectures for middle level learner in Advance Programming, Data Structures and Algorithms and Object Oriented Programming.
+\end{itemize}
+
+%===============================================================================
+\cvsection{Projects}
+
+\cvevent{Change Impact Analysis for C++ \& Java}{\linkage{https://www.fit.uet.vnu.edu.vn/cong-nghe-phan-mem/}{FIT-UET} + \linkage{https://www.toshiba-tsdv.com/}{Toshiba Development Center Vietnam}}{January 2019 -- December 2022}{}
+\begin{itemize}
+	\item Key member in the project, team leader with 5 members.
+	\item Researched and designed core algorithms and libraries \textcolor{gray}{\small like \textit{\linkage{https://github.com/thanhminhmr/Cpp4CIA}{C++ Parser Library}} and \textit{\linkage{https://github.com/thanhminhmr/JavaCIA}{Java Parser Library}} to analyze source code changes and highlight their impact}.
+	\item Maintained and optimized the final product, resulting in
+	more than 80\% decrement of the execution time.
+\end{itemize}
+
+\smallskip\textcolor{accent}{\footnotesize\cvtags{%
+	Change Impact Analysis,
+	Programming Language Structure,
+	Compiler \& Transpiler,
+	Java Language,
+	C \& C++ Language,
+	Java Application Server,
+	Spring MVC,
+	RESTful
+}}
+
+\divider
+
+\cvevent{Change Impact Analysis \& Automated Unit Testing}{\linkage{https://www.fit.uet.vnu.edu.vn/cong-nghe-phan-mem/}{FIT-UET} + \linkage{https://vtx.vn/}{Viettel Aerospace Institute}}{August 2021 -- December 2022}{}
+\begin{itemize}
+	\item Key member in the project, team leader with 5 members.
+	\item Researched and designed core algorithms and libraries.
+	\item Designed the client--server architecture and the REST API between said client and server.
+\end{itemize}
+
+\smallskip\textcolor{accent}{\footnotesize\cvtags{%
+	Change Impact Analysis,
+	Programming Language Structure,
+	Compiler \& Transpiler,
+	C \& C++ Language,
+	Qt Framework,
+	JavaFX,
+	Java Application Server,
+	JAX-RS,
+	RESTful
+}}
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+%===============================================================================
+\cvsection{Education}
+
+\cvevent{B.Sc.\ in Information and Technology}{\linkage{https://uet.vnu.edu.vn/}{University of Engineering and Technology}}{September 2015 -- June 2019}{}
+
+\vspace{-0.5\baselineskip}
+\divider
+
+\cvevent{M.Sc.\ in Software Engineering}{\linkage{https://uet.vnu.edu.vn/}{University of Engineering and Technology}}{September 2019 -- March 2022}{}
+
+% \divider
+
+%===============================================================================
+\newcommand{\cvcertificate}[3]{%
+	{\large\textbf{\color{accent}#1}\par}
+	\smallskip\normalsize
+	\ifstrequal{#2}{}{}{
+		\color{emphasis}#2\par
+		\smallskip}
+	\ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faCalendar~#3}}}\par
+	\medskip\normalsize
+}
+
+\cvsection{Certificate}
+
+\cvcertificate{Certificate of Completion -- \linkage{https://www.toshiba-tsdv.com/}{Toshiba Development Center Vietnam}}{In recognition and appreciation of Research \& Development on Advance Testing Technologies.}{October 2019 \textbf{\enskip\&\enskip} June 2022}
+
+\vspace{-0.5\baselineskip}
+\divider
+
+\cvcertificate{Certificate of Completion -- \linkage{https://infeqa.vnu.edu.vn/}{Institute for Education Quality Assurance}}{New Teaching Methods and Application of Information Technology in Education.}{February 2022}
+
+%===============================================================================
+\cvsection{Strengths}
+
+\cvtags{%
+	Hard-working,
+	Eye for detail,
+	Motivator \& Instructor
+}
+
+\divider
+
+\cvtags{%
+	Research \& Design,
+	Change Impact Analysis,
+	Programming Language Structure,
+	Compiler \& Transpiler
+}
+
+%===============================================================================
+\cvsection{Skills}
+
+\cvskill{English}{4.5}
+\cvskill{Java}{4.5}
+\cvskill{C \& C++}{4}
+\cvskill{JavaScript}{3.5}
+\cvskill{SQL \& Database}{4}
+\cvskill{Git}{5}
+\cvskill{Maven}{4}
+
+
+\end{paracol}
+
+
+\end{document}
